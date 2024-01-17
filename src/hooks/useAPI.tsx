@@ -15,7 +15,7 @@ const message = (input: string) => {
     return JSON.stringify({
         "type": "call",
         "miniMessage": input,
-        "isolateNewlines": true
+        "isolateNewlines": false
     })
 }
 
