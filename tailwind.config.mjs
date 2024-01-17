@@ -8,5 +8,7 @@ export default {
 			minecraft: ['Minecraft', 'monospace'],
 		}
 	},
-	plugins: [],
+	plugins: [
+		require('tailwindcss-animated')
+	],
 }

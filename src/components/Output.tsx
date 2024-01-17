@@ -3,6 +3,7 @@ import { settings, input, rgbFormatRegex } from "../store"
 import type { Settings } from "../store";
 import { ClipboardIcon } from "../icons/Clipboard";
 import { useCachedStore } from "../hooks/useCachedStore";
+import { useToast } from "../hooks/useToast";
 
 const colorMap = {
     "0": "<black>",
@@ -62,12 +63,13 @@ export const transform = (input: string, settings: Settings) => {
 export const Output = () => {
     const [$settings, updateSettings] = useCachedStore(settings);
     const [$input, updateInput] = useCachedStore(input);
+    const [showToast, Toast] = useToast({ message: "Copied to clipboard", type: "success" })
 
     return (
         <div className="relative w-full flex flex-row gap-2 items-center">
             <textarea readOnly={true} className="resize-none 
             p-2 text-slate-300 leading-4
-            max-h-12 overflow-y-auto
+            max-h-12 overflow-y-auto chat-scroll left-scroll
             rounded-tl-md rounded-bl-md rounded-br-md
             bg-gray-800 w-full"
                 value={transform($input, $settings)}>
@@ -78,7 +80,10 @@ export const Output = () => {
             absolute top-0 right-0"
                 onClick={() => {
                     navigator.clipboard.writeText(transform($input, $settings))
+                    showToast()
+
                 }}><ClipboardIcon className="size-4" /> </button>
+            {Toast}
         </div>
     )
 }

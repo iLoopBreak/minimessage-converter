@@ -20,13 +20,10 @@ export const InputText = () => {
                  border-slate-800 border-transparent 
                  bg-[linear-gradient(#000,#000),linear-gradient(to_right,#334454,#334454)]	bg-origin-border 
                  px-3 py-2 
-                
-                 transition-all duration-500 [background-clip:padding-box,_border-box] 
-                focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] 
-                focus:outline-none"
-        //         className="bg-gray-800 
-		// min-h-36 p-2 
-		// w-full"
+                 input-scroll
+                 transition-all duration-75 [background-clip:padding-box,_border-box] 
+                 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] 
+                 focus:outline-none"
             ></textarea>
         </>
     )
