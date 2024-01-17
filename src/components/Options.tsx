@@ -1,5 +1,5 @@
 import { useStore } from "@nanostores/react";
-import { settings, rgbFormats, characters } from "../store";
+import { ColorCharacter, RgbFormat, settings } from "../store";
 import { useCachedStore } from "../hooks/useCachedStore";
 
 
@@ -23,12 +23,12 @@ export const Options = ({ }) => {
                     onChange={(e) => {
                         update({
                             ...$settings,
-                            character: e.target.value
+                            character: e.target.value as ColorCharacter
                         })
                     }}
                     className="bg-gray-700">
 
-                    {characters.map((character) => (
+                    {Object.values(ColorCharacter).map((character) => (
                         <option value={character} key={character}>
                             {character}
                         </option>
@@ -43,12 +43,12 @@ export const Options = ({ }) => {
                     onChange={(e) =>
                         update({
                             ...$settings,
-                            rgbFormat: e.target.value
+                            rgbFormat: e.target.value as RgbFormat
                         })
                     }
                     className="bg-gray-700">
 
-                    {rgbFormats.map((rgbFormat) => (
+                    {Object.values(RgbFormat).map((rgbFormat) => (
                         <option value={rgbFormat} key={rgbFormat}>
                             {rgbFormat}
                         </option>

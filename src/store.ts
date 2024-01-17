@@ -1,22 +1,23 @@
 import { atom, map, type Atom } from "nanostores";
 
-export const characters = [
-    '&',
-    '§'
-];
 
-export const rgbFormatRegex = new Map().set('{#RRGGBB}', '{#([0-9a-f]{6})}').set('&#RRGGBB', '$char#([0-9a-f]{6})');
+export enum ColorCharacter {
+    Ampersand = '&',
+    Section = '§'
+}
 
-export const rgbFormats = [
-    '{#RRGGBB}',
-    '&#RRGGBB'
-];
+export enum RgbFormat {
+    Hex = '{#RRGGBB}',
+    Html = '&#RRGGBB'
+}
+
+export const rgbFormatRegex = new Map().set(RgbFormat.Hex, '{#([0-9a-f]{6})}').set(RgbFormat.Html, '$char#([0-9a-f]{6})');
 
 export type Settings = {
     compact: boolean;
-    character: '&' | '§';
+    character: ColorCharacter;
     rgb: boolean;
-    rgbFormat: '{#RRGGBB}' | '&#RRGGBB';
+    rgbFormat: RgbFormat;
 }
 
 export type AtomStorage<T> = [Atom<T>, (arg0: T) => void];
@@ -41,11 +42,9 @@ const storageAtom = <T = unknown>(key: string, defaultValue: T): AtomStorage<T> 
 
 export const settings = storageAtom<Settings>('settings', {
     compact: true,
-    character: '&',
+    character: ColorCharacter.Ampersand,
     rgb: true,
-    rgbFormat: '{#RRGGBB}',
+    rgbFormat: RgbFormat.Hex,
 })
-
-
 
 export const input = storageAtom<string>('input', '');

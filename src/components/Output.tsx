@@ -49,7 +49,7 @@ export const transform = (input: string, settings: Settings) => {
     }
 
     if (settings.rgb) {
-        const regex = rgbFormatRegex.get(rgbFormat).replace('$char', settings.character)
+        const regex = rgbFormatRegex.get(settings.rgbFormat).replace('$char', settings.character)
         const matcher = new RegExp(regex, "g");
 
         result = result.replaceAll(matcher, "<#$1>")
