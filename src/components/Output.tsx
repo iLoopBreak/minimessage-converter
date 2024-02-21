@@ -37,8 +37,6 @@ const modifierMap = {
 */
 
 export const transform = (input: string, settings: Settings) => {
-    const rgbFormat = settings.rgbFormat.replace('&', settings.character);
-
     let result = input
 
     for (const [key, value] of Object.entries(colorMap)) {

@@ -27,18 +27,7 @@ export const Preview = ({ previewUrl }: Props) => {
             <div id="output-pane" className="flex flex-grow-1 flex-shrink-0 
             bg-cover"
                 style={{ backgroundImage: "url(/assets/images/grass.jpg)" }}>
-                <div id="chat-entry-box" className="hidden">_</div>
-                <div id="server-list-icon" className="hidden">
-                    <img id="server-list-image" src="img/kyori.png" alt="Example server icon" />
-                </div>
                 <div id="output-lines" className="flex flex-grow-1 flex-shrink-0">
-                    <div id="server-list-header" className="mc-font hidden">
-                        <span >KyoriCraft</span>
-                        <span className="is-flex" style={{ color: "#aaaaaa", marginLeft: "auto" }}>
-                            0<span style={{ color: "#555555" }}>/</span>20
-                            <img id="server-list-ping" src="img/ping.png" />
-                        </span>
-                    </div>
                     <pre className="font-minecraft 
                     max-w-[42ch] min-h-10 max-h-[282px]
                     whitespace-pre-wrap break-words
