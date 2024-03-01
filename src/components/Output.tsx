@@ -30,7 +30,7 @@ const modifierMap = {
     "k": ["<obf>", "<obfuscated>"],
     "o": ["<i>", "<italic>"],
     "l": ["<b>", "<bold>"],
-    "r": ["<r>", "<reset>"],
+    "r": ["<reset>", "<reset>"],
 }
 /*
 
