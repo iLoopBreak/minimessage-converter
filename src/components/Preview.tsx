@@ -26,7 +26,7 @@ export const Preview = ({ previewUrl }: Props) => {
         {/* Still working on preview side */}
             <div id="output-pane" className="flex flex-grow-1 flex-shrink-0 
             bg-cover"
-                style={{ backgroundImage: "url(/assets/images/grass.jpg)" }}>
+                style={{ backgroundImage: "url(/assets/images/grass.webp)" }}>
                 <div id="output-lines" className="flex flex-grow-1 flex-shrink-0">
                     <pre className="font-minecraft 
                     max-w-[42ch] min-h-10 max-h-[282px]
