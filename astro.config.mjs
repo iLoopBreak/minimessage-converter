@@ -11,6 +11,8 @@ export default defineConfig({
   site: "https://miniconverter.loopbreak.me",
   output: "static",
   integrations: [react(), tailwind(), sitemap(), vercel({
-    webAnalytics: true
+    webAnalytics: {
+      enabled: true
+    }
   })]
 });
