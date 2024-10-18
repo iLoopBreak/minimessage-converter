@@ -7,7 +7,7 @@ export const Options = ({ }) => {
     const [$settings,update] = useCachedStore(settings);
 
     return (<>
-        <div className="flex flex-col items-center gap-2 sm:flex-row justify-around ">
+        <div className="flex flex-wrap items-center gap-2 sm:flex-nowrap sm:flex-row justify-around ">
             <div className="flex break-words flex-row gap-2 items-center">
                 <input id="compact" type="checkbox" checked={$settings.compact}
                     onChange={() => update({

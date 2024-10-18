@@ -7,7 +7,7 @@ import { DiscordIcon } from "@/icons/Discord";
 <header
     class="bg-opacity-45 rounded-xl
 px-3 py-5 sm:mt-4 mb-10 mx-auto
-max-w-lg gap-10 flex flex-row items-center
+max-w-lg gap-10 flex flex-row items-center justify-around
 bg-slate-600"
 >
     <a href="/" class="flex flex-row items-center">
@@ -20,28 +20,32 @@ bg-slate-600"
         </span>
     </a>
 
-    <nav class="ms-auto me-12 flex flex-row gap-2">
+    <nav class="flex flex-row gap-1 items-center">
         <a
             href="https://discord.gg/HN7yAqDWvG"
             class="nav-link
             font-semibold hover:font-bold
             mx-2 flex flex-row items-center gap-1
-            hover:text-slate-100 hover:shadow-md  hover:shadow-slate-600
+            p-1
+            px-2
+            hover:text-slate-100 hover:shadow-lg  hover:shadow-slate-600/20
             rounded-md
             hover:bg-gradient-to-br bg-opacity-30 
-            hover:from-slate-700 hover:to-transparent"
+            hover:from-slate-700/80 hover:to-transparent"
         >
-           <DiscordIcon className="size-4" /> <span>Discord</span>
+           <DiscordIcon className="size-5" /> <span>Discord</span>
         </a>
         <a
             href="https://builtbybit.com/creators/loopbreak.57501/"
             class="nav-link
             min-w-fit
             font-semibold hover:font-bold
-            hover:text-slate-100 hover:shadow-md hover:shadow-slate-600
+            p-1
+            px-2
+            hover:text-slate-100 hover:shadow-lg hover:shadow-slate-600/20
             rounded-md
             hover:bg-gradient-to-br bg-opacity-30 
-            hover:from-slate-700 hover:to-transparent">My Resources</a
+            hover:from-slate-700/80 hover:to-transparent">My Resources</a
         >
     </nav>
 </header>
