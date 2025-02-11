@@ -2,104 +2,102 @@
 import { ViewTransitions } from "astro:transitions";
 import Header from "./Header.astro";
 interface Props {
-    title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <html>
-    <head>
-        <title>{title}</title>
+  <head>
+    <title>{title}</title>
 
-        <link rel="shortcut icon" href="/favicon.webp" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.webp" type="image/x-icon" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-            href="https://fonts.googleapis.com/css?family=Catamaran"
-            rel="stylesheet"
-        />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Catamaran"
+      rel="stylesheet"
+    />
 
-        <meta
-            name="google-site-verification"
-            content="OliycpQZ0zGu1mWsSvgor6nHJSOuzWpflHNf7g6gOyM"
-        />
+    <meta
+      name="google-site-verification"
+      content="OliycpQZ0zGu1mWsSvgor6nHJSOuzWpflHNf7g6gOyM"
+    />
 
-        <!-- <meta name="robots" content="index, follow" /> -->
-        <meta property="og:site_name" content="Legacy to MiniMessage Editor" />
-        <meta
-            property="og:image"
-            content="https://miniconverter.loopbreak.me/assets/images/logo.webp"
-        />
-        <meta
-            property="og:description"
-            content="A simple tool to convert from legacy format to MiniMessage."
-        />
-        <meta
-            property="og:url"
-            content="https://miniconverter.loopbreak.me"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-            name="description"
-            content="A simple tool to convert from legacy format to MiniMessage."
-        />
-        <meta
-            name="keywords"
-            content="minimessage, legacy, convert, converter, minecraft, minecraft chat, chat, minecraft chat converter"
-        />
-        <link rel="sitemap" href="/sitemap-index.xml" />
+    <!-- <meta name="robots" content="index, follow" /> -->
+    <meta property="og:title" content="Legacy to MiniMessage Editor" />
+    <meta property="og:site_name" content="Legacy to MiniMessage Editor" />
+    <meta
+      property="og:image"
+      content="https://miniconverter.loopbreak.me/assets/images/logo.webp"
+    />
+    <meta
+      property="og:description"
+      content="A simple tool to convert from legacy format to MiniMessage."
+    />
+    <meta property="og:url" content="https://miniconverter.loopbreak.me" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A simple tool to convert from legacy format to MiniMessage."
+    />
+    <meta
+      name="keywords"
+      content="minimessage, legacy, convert, converter, minecraft, minecraft chat, chat, minecraft chat converter"
+    />
+    <link rel="sitemap" href="/sitemap-index.xml" />
 
-        <ViewTransitions />
-    </head>
+    <ViewTransitions />
+  </head>
 
-    <body class="font-catamaran">
-        <div class="fixed left-0 top-0 -z-10 h-full w-full">
-            <div class="relative h-full w-full bg-slate-950">
-                <div
-                    class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"
-                >
-                </div>
-            </div>
+  <body class="font-catamaran">
+    <div class="fixed left-0 top-0 -z-10 h-full w-full">
+      <div class="relative h-full w-full bg-slate-950">
+        <div
+          class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"
+        >
         </div>
+      </div>
+    </div>
 
-        <Header />
+    <Header />
 
-        <slot />
-    </body>
+    <slot />
+  </body>
 </html>
 
 <style is:global>
-    * {
-        color-scheme: dark;
-    }
+  * {
+    color-scheme: dark;
+  }
 
-    @font-face {
-        font-family: "Minecraft";
-        src: url("/font/1_Minecraft-Regular.woff") format("woff");
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-    }
-    @font-face {
-        font-family: "Minecraft";
-        src: url("/font/2_Minecraft-Italic.woff") format("woff");
-        font-weight: normal;
-        font-style: italic;
-        font-display: swap;
-    }
-    @font-face {
-        font-family: "Minecraft";
-        src: url("/font/3_Minecraft-Bold.woff") format("woff");
-        font-weight: bold;
-        font-style: normal;
-        font-display: swap;
-    }
-    @font-face {
-        font-family: "Minecraft";
-        src: url("/font/4_Minecraft-BoldItalic.woff") format("woff");
-        font-weight: bold;
-        font-style: italic;
-        font-display: swap;
-    }
+  @font-face {
+    font-family: "Minecraft";
+    src: url("/font/1_Minecraft-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Minecraft";
+    src: url("/font/2_Minecraft-Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Minecraft";
+    src: url("/font/3_Minecraft-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Minecraft";
+    src: url("/font/4_Minecraft-BoldItalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+  }
 </style>
