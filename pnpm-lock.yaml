@@ -24,44 +24,47 @@ importers:
         specifier: ^9.0.4
         version: 9.0.4(astro@5.16.11(@vercel/functions@2.2.13)(jiti@1.21.7)(rollup@4.55.2)(typescript@5.9.3)(yaml@2.8.2))(react@18.3.1)(rollup@4.55.2)
       '@nanostores/react':
-        specifier: ^0.7.1
+        specifier: ^0.7.3
         version: 0.7.3(nanostores@0.9.5)(react@18.3.1)
       '@types/react':
-        specifier: ^18.2.48
+        specifier: ^18.3.27
         version: 18.3.27
       '@types/react-dom':
-        specifier: ^18.2.18
+        specifier: ^18.3.7
         version: 18.3.7(@types/react@18.3.27)
       '@vercel/analytics':
-        specifier: ^1.2.2
+        specifier: ^1.6.1
         version: 1.6.1(react@18.3.1)
       astro:
         specifier: ^5.16.11
         version: 5.16.11(@vercel/functions@2.2.13)(jiti@1.21.7)(rollup@4.55.2)(typescript@5.9.3)(yaml@2.8.2)
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       nanostores:
         specifier: ^0.9.5
         version: 0.9.5
       react:
-        specifier: ^18.2.0
+        specifier: ^18.3.1
         version: 18.3.1
       react-dom:
-        specifier: ^18.2.0
+        specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       react-use-websocket:
-        specifier: ^4.5.0
+        specifier: ^4.13.0
         version: 4.13.0
       tailwind-merge:
         specifier: ^3.4.0
         version: 3.4.0
       tailwindcss:
-        specifier: ^3.4.1
+        specifier: ^3.4.19
         version: 3.4.19(yaml@2.8.2)
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.9.3
         version: 5.9.3
     devDependencies:
       tailwindcss-animated:
-        specifier: ^1.0.1
+        specifier: ^1.1.2
         version: 1.1.2(tailwindcss@3.4.19(yaml@2.8.2))
 
 packages:
