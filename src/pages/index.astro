@@ -1,58 +1,83 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import Section from "@/components/Section.astro";
-import { Options } from "@/components/Options.tsx";
-import { InputText } from "@/components/InputText.tsx";
-import { Output } from "@/components/Output.tsx";
+import { InputText } from "@/components/InputText";
+import { Options } from "@/components/Options";
+import { Output } from "@/components/Output";
 import { Preview } from "@/components/Preview";
+import Section from "@/components/Section.astro";
+import { ShardAnalyticsTitle } from "@/components/ShardAnalyticsTitle";
+import { ShardAnalyticsIcon } from "@/icons/ShardAnalytics";
+import Layout from "@/layouts/Layout.astro";
 
 const url = () => {
-	const API_URL = import.meta.env.API_URL;
-	if (API_URL.includes("localhost") || API_URL.includes("127.0.0.1"))
-		return `ws://${API_URL}${import.meta.env.URL_MINI_TO_HTML}`;
-	return `wss://${API_URL}${import.meta.env.URL_MINI_TO_HTML}`;
+  const API_URL = import.meta.env.API_URL;
+  if (API_URL.includes("localhost") || API_URL.includes("127.0.0.1"))
+    return `ws://${API_URL}${import.meta.env.URL_MINI_TO_HTML}`;
+  return `wss://${API_URL}${import.meta.env.URL_MINI_TO_HTML}`;
 };
 ---
 
 <Layout title="Legacy to MiniMessage Editor">
-	<Section>
-		<InputText client:only="react" />
-	</Section>
+  <Section class="my-6">
+    <a href="https://shardanalytics.com/" target="_blank" rel="noopener">
+      <div
+        class="flex flex-col sm:flex-row items-start sm:items-center gap-4 rounded-xl border
+		justify-around
+		 border-slate-700/60 bg-slate-950/50 px-4 py-3"
+      >
+        <div class="flex items-center gap-3">
+          <ShardAnalyticsIcon className="h-10 w-10" />
+          <div class="flex flex-col">
+            <p class="text-xs uppercase tracking-[0.18em] text-slate-400">
+              New Project
+            </p>
+            <ShardAnalyticsTitle props={{ className: "text-xl" }} />
+          </div>
+        </div>
+        <p class="text-sm text-slate-300/90 max-w-xl">
+          ShardAnalytics is my new analytics platform built for Minecraft networks.
+        </p>
+      </div></a
+    >
+  </Section>
 
-	<Section class="mt-4">
-		<Options client:only="react" />
-	</Section>
+  <Section>
+    <InputText client:only="react" />
+  </Section>
 
-	<Section class="mt-14 max-w-3xl mb-10 flex flex-col gap-5">
-		<div>
-			<h2 class="font-bold text-xl mb-2">Output:</h2>
-			<Output client:only="react" />
-		</div>
-		<div>
-			<h2 class="font-bold text-xl mb-2">Preview:</h2>
-			<Preview previewUrl={url()} client:only="react" />
-		</div>
-	</Section>
+  <Section class="mt-4">
+    <Options client:only="react" />
+  </Section>
+
+  <Section class="mt-10 mb-10 flex flex-col gap-5">
+    <div>
+      <h2 class="font-bold text-xl mb-2">Output:</h2>
+      <Output client:only="react" />
+    </div>
+    <div>
+      <h2 class="font-bold text-xl mb-2">Preview:</h2>
+      <Preview previewUrl={url()} client:only="react" />
+    </div>
+  </Section>
 </Layout>
 
 <style is:global>
-	.chat-scroll::-webkit-scrollbar {
-		width: 4px;
-		cursor: pointer;
-		/*background-color: rgba(229, 231, 235, var(--bg-opacity));*/
-	}
-	.chat-scroll::-webkit-scrollbar-track {
-		background-color: rgba(229, 231, 235, var(--bg-opacity));
-		cursor: pointer;
-		/*background: red;*/
-	}
-	.chat-scroll::-webkit-scrollbar-thumb {
-		cursor: pointer;
-		background-color: #a0aec0;
-		/*outline: 1px solid slategrey;*/
-	}
-	
-	.left-scroll::-webkit-scrollbar {
-		direction: rtl
-	}
+  .chat-scroll::-webkit-scrollbar {
+    width: 4px;
+    cursor: pointer;
+    /*background-color: rgba(229, 231, 235, var(--bg-opacity));*/
+  }
+  .chat-scroll::-webkit-scrollbar-track {
+    background-color: rgba(229, 231, 235, var(--bg-opacity));
+    cursor: pointer;
+    /*background: red;*/
+  }
+  .chat-scroll::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background-color: #a0aec0;
+    /*outline: 1px solid slategrey;*/
+  }
+
+  .left-scroll::-webkit-scrollbar {
+    direction: rtl;
+  }
 </style>

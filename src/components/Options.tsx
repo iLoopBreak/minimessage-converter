@@ -26,7 +26,7 @@ export const Options = ({ }) => {
                             character: e.target.value as ColorCharacter
                         })
                     }}
-                    className="bg-gray-700">
+                    className="bg-gray-700 px-2">
 
                     {Object.values(ColorCharacter).map((character) => (
                         <option value={character} key={character}>
@@ -38,7 +38,7 @@ export const Options = ({ }) => {
                     Color character
                 </label>
             </div>
-            <div className="flex flex-shrink-0  flex-row gap-2 items-center">
+            <div className="flex flex-shrink-0 flex-row gap-2 items-center">
                 <select id="rgbFormat" value={$settings.rgbFormat}
                     onChange={(e) =>
                         update({
@@ -46,7 +46,7 @@ export const Options = ({ }) => {
                             rgbFormat: e.target.value as RgbFormat
                         })
                     }
-                    className="bg-gray-700">
+                    className="bg-gray-700 px-2">
 
                     {Object.values(RgbFormat).map((rgbFormat) => (
                         <option value={rgbFormat} key={rgbFormat}>
